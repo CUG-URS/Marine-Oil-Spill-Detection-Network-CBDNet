@@ -7,16 +7,20 @@ Link: https://github.com/CUG-URS/Deep-SAR-Oil-Spill-Dataset
 ## Usage
 ### Train
 **train.py** 
+run: python train.py 
+```
 1.Dataset path (palsar, Sentinel)
 ROOT = '.datasets/train/palsar/'
 2.CBDNet is the network, dice_bce_loss is the loss function, and the learning rate is 2e-4
 solver = MyFrame(CBDNet, dice_bce_loss, 2e-4) 
 3.Name of weights document
 NAME = 'palsar_CBDNet' 
-run: python train.py  
+```
 
 ### Test
-**test.py**  
+**test.py**
+run: python test.py
+```
 1.Dataset path
 source = '.datasets/test/palsar/sat/'
 2.Loading Network
@@ -25,16 +29,19 @@ solver = TTAFrame(CBDNet)
 solver.load('.weights/palsar_CBDNet.th')
 4.Test Results Documentation
 target = '.submits/palsar_CBDNet/'
-run: python test.py
+```
+
 
 ### Precision evaluation
 **t1p3-Iou.py**  
+run: python t1p3-Iou.py
+```
 1.truth label
 name_truth = '.datasets/test/palsar/gt/'
 2.Predicted results
 name_pred = '.submits/palsar_CBDNet/'
-run: python t1p3-Iou.py
 
+```
 
 ## Citation
 If you find our work useful for your research, please consider citing our paper:  
@@ -51,7 +58,9 @@ If you find our work useful for your research, please consider citing our paper:
 ```
 
 ## Contact us 
+```
 You can contact the e-mail zhuqq@cug.edu.cn if you have further questions about the usage of codes and datasets.
 For any possible research collaboration, please contact Prof. Qiqi Zhu (zhuqq@cug.edu.cn).
 The homepage of our academic group is: http://grzy.cug.edu.cn/zhuqiqi/en/index.htm.
-Date: Dec 4, 2023  
+Date: Dec 4, 2023
+``` 
