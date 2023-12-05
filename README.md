@@ -58,9 +58,7 @@ If you find our work useful for your research, please consider citing our paper:
 ```
 
 ## Contact us 
-```
 You can contact the e-mail zhuqq@cug.edu.cn if you have further questions about the usage of codes and datasets.
 For any possible research collaboration, please contact Prof. Qiqi Zhu (zhuqq@cug.edu.cn).
 The homepage of our academic group is: http://grzy.cug.edu.cn/zhuqiqi/en/index.htm.
 Date: Dec 4, 2023
-``` 
