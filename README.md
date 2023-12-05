@@ -7,37 +7,32 @@ Link: https://github.com/CUG-URS/Deep-SAR-Oil-Spill-Dataset
 ## Usage
 ### Train
 **train.py** 
-1、Dataset path (palsar, Sentinel)
+1.Dataset path (palsar, Sentinel)
 ROOT = '.datasets/train/palsar/'
-2、CBDNet is the network, dice_bce_loss is the loss function, and the learning rate is 2e-4
+2.CBDNet is the network, dice_bce_loss is the loss function, and the learning rate is 2e-4
 solver = MyFrame(CBDNet, dice_bce_loss, 2e-4) 
-3、Name of weights document
+3.Name of weights document
 NAME = 'palsar_CBDNet' 
-```
 run: python train.py  
 
 ### Test
 **test.py**  
-```
-1、Dataset path
+1.Dataset path
 source = '.datasets/test/palsar/sat/'
-2、Loading Network
+2.Loading Network
 solver = TTAFrame(CBDNet)
-3、Loading the weights file
+3.Loading the weights file
 solver.load('.weights/palsar_CBDNet.th')
-4、Test Results Documentation
+4.Test Results Documentation
 target = '.submits/palsar_CBDNet/'
-```
 run: python test.py
 
 ### Precision evaluation
 **t1p3-Iou.py**  
-```
-1、truth label
+1.truth label
 name_truth = '.datasets/test/palsar/gt/'
-2、Predicted results
+2.Predicted results
 name_pred = '.submits/palsar_CBDNet/'
-```
 run: python t1p3-Iou.py
 
 
